@@ -40,7 +40,7 @@ Person::~Person()
 };
 
 // ==================== Student Class Implementation ====================
-class Student{
+class Student::Person(){
 
 private:
 int yearLevel;
@@ -71,15 +71,16 @@ Student::~Student()
 
 
 
+
 // ==================== Instructor Class Implementation ====================
-class Instructor{
+class Instructor::Person(){
 private:
     string department;
     int experienceYears;
 
 
 public:
-    Instructor(string d,int exyears){
+    Instructor(string d,int exyears)::Person(){
         d=department;
         exyears=experienceYears;
     }
@@ -102,6 +103,7 @@ Instructor::~Instructor()
 }
 };
 
+
 // ==================== Course Class Implementation ====================
 class Course{
 private:
@@ -121,13 +123,21 @@ public:
     }
 
     addStudent(const Student& s){
+        if(max<students.length())
     students[]=s;
 
     }
 
 
+
     displayCourseInfo(){
-    cout<<courseCode<<" "<<courseName<<" "<<
+    cout<<courseCode<<endl;
+    cout<<courseName<<endl;
+    cout<<maxStudents<<endl;
+    cout<<currentStudents<<endl;
+
+
+
     }
 
 
@@ -143,11 +153,17 @@ Course::~Course()
 }
 };
 
-
-
 // ==================== Main Function ====================
 int main() {
-   
+   Student s1=new Student(2,computer science);
+    Student s2=new Student(2,business);
+     Instructor i1=new Instructor(computer science,5);
+    Course c1=new Course(1600,accounting,100,50);
+    s1.Course c1;
+     s2.Course c1;
+    
+    
+    
     
     return 0;
 }
