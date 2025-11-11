@@ -5,6 +5,22 @@
 using namespace std;
 //#write Instructor class here
 
+class Instructor
+{
+    public:
+        Instructor();
+        virtual ~Instructor();
+        Instructor(string d,int exyears);
+        display()::Person();
+
+    protected:
+
+    private:
+};
+
+#endif // INSTRUCTOR_H
+
+
 
 
 
