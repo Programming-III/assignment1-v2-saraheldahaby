@@ -10,7 +10,7 @@ class Instructor
     public:
         Instructor();
         virtual ~Instructor();
-        Instructor(string d,int exyears);
+        Instructor(string d,int exyears):Person();
         display()::Person();
 
     protected:
